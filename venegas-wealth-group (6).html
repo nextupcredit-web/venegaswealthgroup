@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Venegas Wealth Group LLC – Chicago's premier real estate investment firm. Buy & hold, fix & flip, property management, and investment opportunities." />
+  <title>Venegas Wealth Group LLC | Chicago Real Estate Investment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+:root {
+  --navy: #0A1F44;
+  --navy-light: #132a5e;
+  --gold: #C9A84C;
+  --gold-light: #e2c06e;
+  --gold-dark: #a8852e;
+  --white: #FFFFFF;
+  --off-white: #F8F6F0;
+  --gray: #6b7280;
+  --light-gray: #f1f0ec;
+  --text-dark: #0A1F44;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Cormorant Garamond', serif;
+  --font-ui: 'Montserrat', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text-dark); background: var(--white); overflow-x: hidden; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10,31,68,0.97); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  padding: 0 2rem; height: 70px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; cursor: pointer; }
+.nav-logo-text { font-family: var(--font-display); color: var(--white); font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; line-height: 1.2; }
+.nav-logo-text span { display: block; color: var(--gold); font-size: 0.6rem; font-family: var(--font-ui); letter-spacing: 3px; font-weight: 500; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; cursor: pointer; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 0.5rem 1.25rem; border-radius: 2px; font-weight: 700 !important; }
+.nav-cta:hover { background: var(--gold-light) !important; }
+
+/* HAMBURGER */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; background: none; border: none; }
+.hamburger span { width: 26px; height: 2px; background: var(--gold); transition: all 0.3s; display: block; }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none; position: fixed; top: 70px; left: 0; right: 0;
+  background: var(--navy); border-top: 1px solid rgba(201,168,76,0.3);
+  z-index: 999; flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: rgba(255,255,255,0.85); text-decoration: none;
+  font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 1rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s; cursor: pointer;
+}
+.mobile-menu a:hover { color: var(--gold); background: rgba(201,168,76,0.08); padding-left: 2.5rem; }
+.mob-cta { margin: 1rem 2rem 1rem !important; background: var(--gold) !important; color: var(--navy) !important; text-align: center !important; border-radius: 2px !important; font-weight: 700 !important; border-bottom: none !important; padding: 0.85rem 2rem !important; }
+
+/* PAGE SYSTEM */
+.page { display: none; }
+.page.active { display: block; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #060f22 0%, #0A1F44 50%, #0d2654 100%);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 120px 2rem 4rem; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(201,168,76,0.06) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(201,168,76,0.04) 0%, transparent 40%);
+}
+.hero-content { max-width: 820px; position: relative; z-index: 1; }
+.hero-badge {
+  display: inline-block; border: 1px solid rgba(201,168,76,0.5);
+  color: var(--gold); font-family: var(--font-ui); font-size: 0.62rem;
+  letter-spacing: 4px; text-transform: uppercase; padding: 0.4rem 1.5rem; margin-bottom: 2rem;
+}
+.hero h1 { font-family: var(--font-display); font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 900; color: var(--white); line-height: 1.05; margin-bottom: 0.5rem; }
+.hero h1 span { color: var(--gold); }
+.hero-sub { font-family: var(--font-display); font-size: clamp(1rem, 2.5vw, 1.5rem); color: rgba(255,255,255,0.6); font-weight: 300; margin-bottom: 1.5rem; font-style: italic; letter-spacing: 2px; }
+.hero-divider { width: 60px; height: 1px; background: var(--gold); margin: 1.5rem auto; }
+.hero-desc { font-family: var(--font-ui); font-size: 0.87rem; color: rgba(255,255,255,0.62); letter-spacing: 0.3px; line-height: 1.9; max-width: 540px; margin: 0 auto 2.5rem; }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* BUTTONS */
+.btn-primary {
+  background: var(--gold); color: var(--navy);
+  padding: 0.9rem 2.5rem; font-family: var(--font-ui); font-size: 0.72rem;
+  font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  text-decoration: none; border: none; cursor: pointer; transition: all 0.3s; display: inline-block;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline {
+  border: 1px solid var(--gold); color: var(--gold);
+  padding: 0.9rem 2.5rem; font-family: var(--font-ui); font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; background: transparent; transition: all 0.3s; display: inline-block;
+}
+.btn-outline:hover { background: rgba(201,168,76,0.1); transform: translateY(-2px); }
+
+/* STATS BAR */
+.stats-bar { background: var(--gold); padding: 1.5rem 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+.stat-item { text-align: center; color: var(--navy); }
+.stat-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 900; display: block; line-height: 1; }
+.stat-label { font-family: var(--font-ui); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; opacity: 0.75; }
+
+/* SECTIONS */
+section { padding: 5rem 2rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label { font-family: var(--font-ui); font-size: 0.62rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.section-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; color: var(--navy); line-height: 1.1; margin-bottom: 1rem; }
+.section-title.white { color: var(--white); }
+.section-divider { width: 60px; height: 2px; background: var(--gold); margin-bottom: 1.5rem; }
+.section-desc { font-size: 1rem; color: var(--gray); line-height: 1.8; max-width: 600px; font-family: var(--font-ui); font-size: 0.87rem; }
+
+/* SERVICE CARDS */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.service-card { border: 1px solid rgba(10,31,68,0.1); padding: 2.5rem 2rem; transition: all 0.3s; position: relative; overflow: hidden; background: var(--white); }
+.service-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform 0.3s; }
+.service-card:hover { box-shadow: 0 20px 60px rgba(10,31,68,0.1); transform: translateY(-4px); }
+.service-card:hover::after { transform: scaleX(1); }
+.service-icon { font-size: 1.8rem; margin-bottom: 1.2rem; color: var(--gold); }
+.service-card h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--navy); margin-bottom: 0.75rem; }
+.service-card p { font-family: var(--font-ui); font-size: 0.83rem; color: var(--gray); line-height: 1.8; }
+
+/* DARK SECTION */
+.section-dark { background: var(--navy); color: var(--white); }
+.section-dark .section-desc { color: rgba(255,255,255,0.62); }
+
+/* INVEST GRID */
+.invest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.invest-card { border: 1px solid rgba(201,168,76,0.25); padding: 2rem; transition: all 0.3s; background: rgba(255,255,255,0.02); }
+.invest-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+.invest-card h4 { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); margin-bottom: 0.5rem; }
+.invest-card p { font-family: var(--font-ui); font-size: 0.81rem; color: rgba(255,255,255,0.62); line-height: 1.7; }
+
+/* FORMS */
+.form-section { background: var(--off-white); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; align-items: start; }
+.form-info h3 { font-family: var(--font-display); font-size: 1.8rem; color: var(--navy); margin-bottom: 1rem; }
+.form-info p { font-family: var(--font-ui); font-size: 0.84rem; color: var(--gray); line-height: 1.8; margin-bottom: 1.2rem; }
+.contact-item { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-family: var(--font-ui); font-size: 0.83rem; color: var(--navy); }
+.contact-item .icon { color: var(--gold); font-size: 1rem; }
+.form-box { background: var(--white); padding: 2.5rem; border: 1px solid rgba(10,31,68,0.1); }
+.form-box h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--navy); margin-bottom: 1.5rem; }
+.form-row { margin-bottom: 1.2rem; }
+.form-row label { display: block; font-family: var(--font-ui); font-size: 0.67rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 0.4rem; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 0.75rem 1rem; border: 1px solid rgba(10,31,68,0.2);
+  background: var(--white); font-family: var(--font-ui); font-size: 0.84rem;
+  color: var(--navy); outline: none; transition: border-color 0.3s; border-radius: 0; -webkit-appearance: none; appearance: none;
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--gold); }
+.form-row textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  width: 100%; background: var(--navy); color: var(--gold); border: none;
+  padding: 1rem; font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; margin-top: 0.5rem;
+}
+.form-submit:hover { background: var(--navy-light); }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-img-box { background: var(--navy); aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.about-frame { position: absolute; inset: 15px; border: 1px solid rgba(201,168,76,0.3); pointer-events: none; }
+.about-img-placeholder { text-align: center; }
+.about-img-placeholder .big { font-size: 5rem; color: var(--gold); opacity: 0.35; display: block; margin-bottom: 1rem; }
+.about-text p { font-family: var(--font-ui); font-size: 0.86rem; color: var(--gray); line-height: 1.9; margin-bottom: 1.2rem; }
+.values-list { list-style: none; margin-top: 1.5rem; }
+.values-list li { font-family: var(--font-ui); font-size: 0.81rem; color: var(--navy); padding: 0.6rem 0; border-bottom: 1px solid rgba(10,31,68,0.08); display: flex; align-items: center; gap: 0.75rem; }
+.values-list li::before { content: ''; width: 20px; height: 1px; background: var(--gold); flex-shrink: 0; }
+
+/* WHY CARDS */
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.why-card { padding: 2rem; background: var(--off-white); border-left: 3px solid var(--gold); transition: all 0.3s; }
+.why-card:hover { background: var(--white); box-shadow: 0 10px 40px rgba(10,31,68,0.08); }
+.why-card h4 { font-family: var(--font-display); font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; }
+.why-card p { font-family: var(--font-ui); font-size: 0.81rem; color: var(--gray); line-height: 1.7; }
+
+/* PAGE HEADERS */
+.page-header { padding-top: 70px; background: var(--navy); }
+.page-header-inner { padding: 4rem 2rem 3rem; max-width: 1100px; margin: 0 auto; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); color: var(--white); font-weight: 900; }
+.page-header h1 span { color: var(--gold); }
+.page-header p { font-family: var(--font-ui); font-size: 0.88rem; color: rgba(255,255,255,0.62); max-width: 560px; margin-top: 1rem; line-height: 1.8; }
+
+/* FOOTER */
+footer { background: #060f22; padding: 3rem 2rem 1.5rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
+.footer-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--white); font-weight: 700; margin-bottom: 0.25rem; }
+.footer-tag { font-family: var(--font-ui); font-size: 0.58rem; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; }
+.footer-brand p { font-family: var(--font-ui); font-size: 0.79rem; line-height: 1.8; color: rgba(255,255,255,0.45); }
+.footer-col h4 { font-family: var(--font-ui); font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 600; }
+.footer-col a, .footer-col p { display: block; font-family: var(--font-ui); font-size: 0.79rem; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.3s; cursor: pointer; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+.footer-bottom p { font-family: var(--font-ui); font-size: 0.7rem; color: rgba(255,255,255,0.28); }
+
+/* TOAST */
+.toast { position: fixed; bottom: 2rem; right: 2rem; background: var(--navy); color: var(--gold); padding: 1rem 2rem; font-family: var(--font-ui); font-size: 0.81rem; font-weight: 600; letter-spacing: 1px; border: 1px solid var(--gold); z-index: 9999; display: none; }
+
+/* ── LOADER ── */
+#loader {
+  position: fixed; inset: 0; z-index: 99999;
+  background: var(--navy);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+#loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+#loader img { width: 200px; max-width: 65vw; animation: loaderPulse 1.8s ease-in-out infinite; }
+#loader .loader-bar-wrap { width: 180px; height: 2px; background: rgba(201,168,76,0.15); margin-top: 2.5rem; overflow: hidden; border-radius: 1px; }
+#loader .loader-bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold-dark), var(--gold-light)); animation: loaderFill 2.2s ease forwards; }
+#loader .loader-text { font-family: var(--font-ui); font-size: 0.58rem; letter-spacing: 5px; color: rgba(201,168,76,0.5); text-transform: uppercase; margin-top: 1rem; }
+@keyframes loaderPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.75;transform:scale(0.96)} }
+@keyframes loaderFill { 0%{width:0%} 70%{width:85%} 100%{width:100%} }
+
+/* ── MARQUEE ── */
+.marquee-wrap { background: var(--gold); overflow: hidden; white-space: nowrap; padding: 0.65rem 0; }
+.marquee-track { display: inline-block; animation: marqueeScroll 30s linear infinite; }
+.marquee-track span { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--navy); padding: 0 2rem; }
+.marquee-track span i { opacity: 0.45; margin-right: 0.4rem; }
+@keyframes marqueeScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity:0; transform:translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-left { opacity:0; transform:translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-left.visible { opacity:1; transform:translateX(0); }
+.reveal-right { opacity:0; transform:translateX(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-right.visible { opacity:1; transform:translateX(0); }
+.reveal-scale { opacity:0; transform:scale(0.92); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal-scale.visible { opacity:1; transform:scale(1); }
+.stagger>*:nth-child(1){transition-delay:0s}
+.stagger>*:nth-child(2){transition-delay:0.13s}
+.stagger>*:nth-child(3){transition-delay:0.26s}
+.stagger>*:nth-child(4){transition-delay:0.39s}
+
+/* badge float */
+@keyframes floatBadge { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+.hero-badge { animation: floatBadge 3.5s ease-in-out infinite; }
+
+/* shimmer dividers */
+@keyframes shimmer { 0%{background-position:-200% center} 100%{background-position:200% center} }
+.section-divider { background: linear-gradient(90deg,var(--gold-dark),var(--gold-light),var(--gold-dark)); background-size:200% auto; animation: shimmer 3s linear infinite; }
+
+/* UTILITY */
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+.icon-card { text-align: center; padding: 2rem; background: var(--off-white); }
+.icon-card i { font-size: 1.8rem; color: var(--gold); margin-bottom: 0.75rem; display: block; }
+.icon-card h4 { font-family: var(--font-display); color: var(--navy); margin-bottom: 0.5rem; font-size: 1.05rem; }
+.icon-card p { font-family: var(--font-ui); font-size: 0.79rem; color: var(--gray); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  section { padding: 3.5rem 1.25rem; }
+  .form-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .stats-bar { gap: 1.5rem; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; }
+  .form-box { padding: 1.75rem 1.25rem; }
+  .page-header-inner { padding: 3rem 1.25rem 2.5rem; }
+}
+@media (max-width: 480px) {
+  .hero { padding: 100px 1.25rem 3rem; }
+  .stats-bar { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+}
+  </style>
+</head>
+<body>
+
+<!-- ── LOADING SCREEN ── -->
+<div id="loader">
+  <div style="text-align:center;animation:loaderPulse 1.8s ease-in-out infinite;">
+    <p style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:#fff;letter-spacing:4px;line-height:1;">VENEGAS</p>
+    <p style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#C9A84C;letter-spacing:6px;margin-top:0.3rem;font-weight:400;">WEALTH GROUP</p>
+    <p style="font-family:'Montserrat',sans-serif;font-size:0.55rem;letter-spacing:4px;color:rgba(201,168,76,0.45);margin-top:0.4rem;text-transform:uppercase;">Real Estate Investment Firm · Chicago</p>
+  </div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <p class="loader-text">Loading</p>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="nav-logo-text">
+      VENEGAS WEALTH GROUP
+      <span>Real Estate Investment Firm · Chicago</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')">Home</a></li>
+    <li><a onclick="showPage('about')">About</a></li>
+    <li><a onclick="showPage('services')">Services</a></li>
+    <li><a onclick="showPage('investors')">Investors</a></li>
+    <li><a onclick="showPage('wholesalers')">Wholesalers</a></li>
+    <li><a onclick="showPage('owners')">Property Owners</a></li>
+    <li><a onclick="showPage('contact')" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');closeMenu()">Home</a>
+  <a onclick="showPage('about');closeMenu()">About</a>
+  <a onclick="showPage('services');closeMenu()">Services</a>
+  <a onclick="showPage('investors');closeMenu()">Investors</a>
+  <a onclick="showPage('wholesalers');closeMenu()">Wholesalers</a>
+  <a onclick="showPage('owners');closeMenu()">Property Owners</a>
+  <a onclick="showPage('contact');closeMenu()" class="mob-cta">Contact Us</a>
+</div>
+
+<div class="toast" id="toast">✓ Message sent — we'll be in touch shortly.</div>
+
+
+<!-- ═══ HOME PAGE ═══ -->
+<div id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Chicago Real Estate Investment Firm</div>
+      <h1>Building Wealth<br><span>Through Real Estate</span></h1>
+      <p class="hero-sub">Rooted in Chicago. Built for Legacy.</p>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">Venegas Wealth Group LLC acquires, rehabilitates, and manages investment properties across the Chicago metropolitan area. We create long-term wealth through strategic acquisitions and strong partnerships.</p>
+      <div class="hero-btns">
+        <span class="btn-primary" onclick="showPage('investors')">Partner With Us</span>
+        <span class="btn-outline" onclick="showPage('services')">Our Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE TICKER -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span><i class="fa-solid fa-star"></i>Chicago Real Estate Investment</span>
+      <span><i class="fa-solid fa-building"></i>Buy &amp; Hold Properties</span>
+      <span><i class="fa-solid fa-hammer"></i>Fix &amp; Flip Specialists</span>
+      <span><i class="fa-solid fa-key"></i>Property Management</span>
+      <span><i class="fa-solid fa-handshake"></i>Private Lending Opportunities</span>
+      <span><i class="fa-solid fa-chart-line"></i>Equity Partnerships</span>
+      <span><i class="fa-solid fa-location-dot"></i>Serving Greater Chicago</span>
+      <span><i class="fa-solid fa-shield-halved"></i>Venegas Wealth Group</span>
+      <!-- duplicate for seamless loop -->
+      <span><i class="fa-solid fa-star"></i>Chicago Real Estate Investment</span>
+      <span><i class="fa-solid fa-building"></i>Buy &amp; Hold Properties</span>
+      <span><i class="fa-solid fa-hammer"></i>Fix &amp; Flip Specialists</span>
+      <span><i class="fa-solid fa-key"></i>Property Management</span>
+      <span><i class="fa-solid fa-handshake"></i>Private Lending Opportunities</span>
+      <span><i class="fa-solid fa-chart-line"></i>Equity Partnerships</span>
+      <span><i class="fa-solid fa-location-dot"></i>Serving Greater Chicago</span>
+      <span><i class="fa-solid fa-shield-halved"></i>Venegas Wealth Group</span>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item"><span class="stat-num">Chicago</span><span class="stat-label">Metro Market</span></div>
+    <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Investment Strategies</span></div>
+    <div class="stat-item"><span class="stat-num">IL</span><span class="stat-label">Registered Entity</span></div>
+    <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Commitment to Growth</span></div>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <p class="section-label">What We Do</p>
+      <h2 class="section-title">Our Investment Strategies</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">We leverage multiple acquisition strategies to maximize returns and build lasting value in Chicago-area real estate markets.</p>
+      <div class="services-grid stagger">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+          <h3>Buy &amp; Hold</h3>
+          <p>We acquire residential and multi-family properties and hold them as income-generating rental assets — building equity while creating passive cash flow month after month.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+          <h3>Fix &amp; Flip</h3>
+          <p>We identify undervalued properties, execute precise renovations, and sell for strong returns — turning distressed assets into beautifully restored Chicago homes.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-key"></i></div>
+          <h3>Property Management</h3>
+          <p>We professionally manage rental properties for owners across the Chicago area — handling tenants, maintenance, and everything in between so you don't have to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="section-inner">
+      <p class="section-label">Funding &amp; Partnerships</p>
+      <h2 class="section-title white">Ready to Invest in<br><span style="color:var(--gold)">Chicago Real Estate?</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Whether you're a private lender, hard money lender, or equity partner — we're actively seeking capital partners to fund profitable real estate projects across the Chicago metro area.</p>
+      <div class="invest-grid stagger">
+        <div class="invest-card reveal"><h4>Private Lending</h4><p>Earn strong, secured returns by lending capital to fund our acquisition and renovation projects.</p></div>
+        <div class="invest-card reveal"><h4>Equity Partnership</h4><p>Partner with us on deals and share in the profits of successful fix-and-flip and buy-and-hold projects.</p></div>
+        <div class="invest-card reveal"><h4>Hard Money</h4><p>We work with experienced hard money lenders to close deals quickly and efficiently across Chicago.</p></div>
+        <div class="invest-card reveal"><h4>Joint Ventures</h4><p>Bring capital, we bring deals and execution. Build wealth together through structured joint venture agreements.</p></div>
+      </div>
+      <br><br>
+      <span class="btn-primary" onclick="showPage('investors')">Learn More About Investing With Us</span>
+    </div>
+  </section>
+
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="two-col">
+        <div style="background:var(--white);padding:2.5rem;border-top:3px solid var(--gold);">
+          <p class="section-label">Wholesalers</p>
+          <h3 style="font-family:var(--font-display);font-size:1.7rem;color:var(--navy);margin-bottom:1rem;">Have a Deal?<br>We're Buying.</h3>
+          <p style="font-family:var(--font-ui);font-size:0.84rem;color:var(--gray);line-height:1.8;margin-bottom:1.5rem;">We work with wholesalers across the Chicago area. If you have off-market deals or distressed properties, we want to hear from you. Fast closings, no games.</p>
+          <span class="btn-primary" onclick="showPage('wholesalers')">Submit a Deal</span>
+        </div>
+        <div style="background:var(--navy);padding:2.5rem;border-top:3px solid var(--gold);">
+          <p class="section-label">Property Owners</p>
+          <h3 style="font-family:var(--font-display);font-size:1.7rem;color:var(--white);margin-bottom:1rem;">Tired of Managing<br>Your Property?</h3>
+          <p style="font-family:var(--font-ui);font-size:0.84rem;color:rgba(255,255,255,0.62);line-height:1.8;margin-bottom:1.5rem;">Let Venegas Wealth Group handle it. We provide full-service property management so you can enjoy the income without the headaches.</p>
+          <span class="btn-outline" onclick="showPage('owners')">Inquire About Management</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /home -->
+
+
+<!-- ═══ ABOUT PAGE ═══ -->
+<div id="page-about" class="page">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Our Story</p>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);color:var(--white);font-weight:900;">About Venegas<br><span style="color:var(--gold)">Wealth Group</span></h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-img-box reveal-left">
+          <div class="about-frame"></div>
+          <div class="about-img-placeholder">
+            <span class="big"><i class="fa-solid fa-user-tie"></i></span>
+            <p style="font-family:var(--font-ui);font-size:0.68rem;letter-spacing:2px;color:rgba(255,255,255,0.35);text-transform:uppercase;">Juan Venegas</p>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <p class="section-label">Founder &amp; Principal Investor</p>
+          <h2 class="section-title">Juan Venegas</h2>
+          <div class="section-divider"></div>
+          <p>Juan Venegas was born and raised in the Chicago area, where a deep appreciation for real estate was instilled in him from an early age. Following in the footsteps of his father — a respected investor and property owner — Juan grew up watching how strategic real estate decisions could transform families' financial futures.</p>
+          <p>Armed with that foundation and an unwavering commitment to his community, Juan founded Venegas Wealth Group LLC to build a legacy of wealth creation through disciplined real estate investment across the Chicago metropolitan area.</p>
+          <p>His approach combines market knowledge, strong relationships, and a long-term vision — acquiring properties that generate real value for investors, tenants, and communities alike.</p>
+          <ul class="values-list">
+            <li>Born &amp; Raised in Chicago — deep local market knowledge</li>
+            <li>Legacy of real estate passed down through family</li>
+            <li>Focused on Buy &amp; Hold and Fix &amp; Flip strategies</li>
+            <li>Committed to building wealth for partners &amp; investors</li>
+            <li>Registered LLC in the State of Illinois</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="section-inner" style="text-align:center;">
+      <p class="section-label">Our Mission</p>
+      <h2 class="section-title white" style="max-width:700px;margin:0 auto 1rem;">Built on <span style="color:var(--gold)">Trust, Strategy,</span> and Chicago Roots</h2>
+      <div class="section-divider" style="margin:1rem auto 1.5rem;"></div>
+      <p style="font-family:var(--font-ui);font-size:0.87rem;color:rgba(255,255,255,0.62);max-width:640px;margin:0 auto;line-height:1.9;">At Venegas Wealth Group, our mission is to create lasting wealth through smart, disciplined real estate investment. We believe in transparency with our investors, quality for our tenants, and results for our partners. Every deal reflects the values we were raised with — integrity, hard work, and community.</p>
+    </div>
+  </section>
+</div><!-- /about -->
+
+
+<!-- ═══ SERVICES PAGE ═══ -->
+<div id="page-services" class="page">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">What We Offer</p>
+      <h1>Our <span>Services</span></h1>
+      <p>Three powerful strategies driving growth across the Chicago real estate market.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div style="display:grid;gap:4rem;">
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:center;">
+          <div style="overflow:hidden;min-height:320px;position:relative;">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80" alt="Chicago rental property" style="width:100%;height:100%;object-fit:cover;min-height:320px;display:block;" onerror="this.parentElement.style.background='var(--navy)'">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(10,31,68,0.7));padding:1.5rem 1rem 1rem;">
+              <span style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:3px;color:var(--gold);text-transform:uppercase;">Strategy 01 — Buy &amp; Hold</span>
+            </div>
+          </div>
+          <div>
+            <p class="section-label">Long-Term Wealth</p>
+            <h2 class="section-title">Buy &amp; Hold</h2>
+            <div class="section-divider"></div>
+            <p style="font-family:var(--font-ui);font-size:0.86rem;color:var(--gray);line-height:1.9;margin-bottom:1rem;">We acquire single-family homes and multi-family properties across the Chicago area with a long-term hold strategy. Our properties generate monthly rental income while appreciating in value over time.</p>
+            <p style="font-family:var(--font-ui);font-size:0.86rem;color:var(--gray);line-height:1.9;">This is the cornerstone of our wealth-building model — creating stable, predictable cash flow and building a portfolio that grows year over year.</p>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(10,31,68,0.08);">
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:center;">
+          <div>
+            <p class="section-label">Value Add</p>
+            <h2 class="section-title">Fix &amp; Flip</h2>
+            <div class="section-divider"></div>
+            <p style="font-family:var(--font-ui);font-size:0.86rem;color:var(--gray);line-height:1.9;margin-bottom:1rem;">We identify distressed and undervalued properties, execute high-quality renovations, and sell for significant profit. Our eye for value and renovation expertise transforms neglected properties into desirable Chicago homes.</p>
+            <p style="font-family:var(--font-ui);font-size:0.86rem;color:var(--gray);line-height:1.9;">Fast, efficient, and profitable — this strategy generates strong short-term returns for our capital partners.</p>
+          </div>
+          <div style="overflow:hidden;min-height:320px;position:relative;">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Contractors renovating house" style="width:100%;height:100%;object-fit:cover;min-height:320px;display:block;" onerror="this.parentElement.style.background='var(--gold)'">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(10,31,68,0.7));padding:1.5rem 1rem 1rem;">
+              <span style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:3px;color:var(--gold);text-transform:uppercase;">Strategy 02 — Fix &amp; Flip</span>
+            </div>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(10,31,68,0.08);">
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:center;">
+          <div style="overflow:hidden;min-height:320px;position:relative;">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Property management building Chicago" style="width:100%;height:100%;object-fit:cover;min-height:320px;display:block;" onerror="this.parentElement.style.background='var(--off-white)'">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(10,31,68,0.7));padding:1.5rem 1rem 1rem;">
+              <span style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:3px;color:var(--gold);text-transform:uppercase;">Strategy 03 — Property Management</span>
+            </div>
+          </div>
+          <div>
+            <p class="section-label">For Property Owners</p>
+            <h2 class="section-title">Property Management</h2>
+            <div class="section-divider"></div>
+            <p style="font-family:var(--font-ui);font-size:0.86rem;color:var(--gray);line-height:1.9;margin-bottom:1rem;">Own rental property in Chicago but don't want the day-to-day hassle? We provide full-service property management — from tenant screening and rent collection to maintenance coordination and reporting.</p>
+            <p style="font-family:var(--font-ui);font-size:0.86rem;color:var(--gray);line-height:1.9;">We protect your investment while you enjoy passive income, stress-free.</p>
+            <br>
+            <span class="btn-primary" onclick="showPage('owners')">Inquire About Management</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div><!-- /services -->
+
+
+<!-- ═══ INVESTORS PAGE ═══ -->
+<div id="page-investors" class="page">
+  <div style="padding-top:70px;background:var(--navy);">
+    <div class="page-header-inner" style="text-align:center;">
+      <p class="section-label">Funding &amp; Capital Partners</p>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);color:var(--white);font-weight:900;">Invest With<br><span style="color:var(--gold)">Venegas Wealth Group</span></h1>
+      <p style="font-family:var(--font-ui);font-size:0.88rem;color:rgba(255,255,255,0.62);max-width:580px;margin:1rem auto 2rem;line-height:1.8;">We're actively seeking private lenders, hard money lenders, and equity partners to fund real estate acquisitions and renovations across the Chicago metro area.</p>
+      <span class="btn-primary" onclick="document.getElementById('invest-form').scrollIntoView({behavior:'smooth'})">Connect With Us</span>
+      <br><br>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <p class="section-label">Why Partner With Us</p>
+      <h2 class="section-title">Built for Credibility.<br>Designed for Returns.</h2>
+      <div class="section-divider"></div>
+      <div class="why-grid stagger">
+        <div class="why-card reveal"><h4>Chicago Market Expertise</h4><p>Deep roots and local knowledge across Chicago neighborhoods — we know where value is created and how to find it.</p></div>
+        <div class="why-card reveal"><h4>Structured LLC Entity</h4><p>Venegas Wealth Group LLC is a registered Illinois entity, providing legal structure and accountability for all transactions.</p></div>
+        <div class="why-card reveal"><h4>Multiple Exit Strategies</h4><p>Whether you prefer short-term returns through flips or long-term income through rentals, we structure deals to match your goals.</p></div>
+        <div class="why-card reveal"><h4>Transparent Communication</h4><p>We keep our partners informed at every stage — from acquisition through closing. No surprises, just results.</p></div>
+        <div class="why-card reveal"><h4>Asset-Backed Security</h4><p>All lending is backed by real physical assets. Your capital is secured against real property in the Chicago metro area.</p></div>
+        <div class="why-card reveal"><h4>Family Legacy &amp; Commitment</h4><p>Juan's father built wealth through real estate. This isn't a side hustle — it's a generational commitment to excellence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark" id="invest-form">
+    <div class="section-inner">
+      <div class="form-grid">
+        <div class="form-info reveal-left">
+          <p class="section-label" style="color:var(--gold);">Let's Talk</p>
+          <h3 style="color:var(--white);font-family:var(--font-display);font-size:1.8rem;margin-bottom:1rem;">Ready to Fund<br>Your Next Deal?</h3>
+          <p style="color:rgba(255,255,255,0.62);">Whether you're a private lender, hard money lender with capital to deploy, or an investor seeking equity partnership — we want to hear from you.</p>
+          <div class="contact-item" style="color:rgba(255,255,255,0.8);"><span class="icon"><i class="fa-solid fa-phone"></i></span> 312-843-8223</div>
+          <div class="contact-item" style="color:rgba(255,255,255,0.8);font-size:0.8rem;"><span class="icon"><i class="fa-solid fa-envelope"></i></span> venegaswealthgroup@yahoo.com</div>
+          <div class="contact-item" style="color:rgba(255,255,255,0.8);align-items:flex-start;"><span class="icon" style="margin-top:2px;"><i class="fa-solid fa-location-dot"></i></span><span>680 N Lake Shore Dr, Ste 110-2937<br>Chicago, IL 60611</span></div>
+        </div>
+        <div class="form-box reveal-scale">
+          <h3>Investor / Lender Inquiry</h3>
+          <div class="form-row"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" id="inv-name"></div>
+          <div class="form-row"><label>Email</label><input type="email" name="email" placeholder="your@email.com" id="inv-email"></div>
+          <div class="form-row"><label>Phone</label><input type="tel" name="phone" placeholder="(312) 000-0000" id="inv-phone"></div>
+          <div class="form-row"><label>Investor Type</label>
+            <select name="investor_type" id="inv-type"><option value="">Select your role...</option><option>Private Lender</option><option>Hard Money Lender</option><option>Equity Partner</option><option>Joint Venture</option><option>Other</option></select>
+          </div>
+          <div class="form-row"><label>Available Capital Range</label>
+            <select name="capital_range" id="inv-capital"><option value="">Select range...</option><option>Under $50,000</option><option>$50,000 – $100,000</option><option>$100,000 – $250,000</option><option>$250,000 – $500,000</option><option>$500,000+</option></select>
+          </div>
+          <div class="form-row"><label>Message</label><textarea name="message" placeholder="Tell us about your investment goals..." id="inv-msg"></textarea></div>
+          <input type="hidden" name="form_type" value="Investor / Lender Inquiry">
+          <button class="form-submit" onclick="handleSubmit(this, ['inv-name','inv-email','inv-phone','inv-type','inv-capital','inv-msg'])">Submit Inquiry</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /investors -->
+
+
+<!-- ═══ WHOLESALERS PAGE ═══ -->
+<div id="page-wholesalers" class="page">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">For Wholesalers</p>
+      <h1>We Buy Deals.<br><span>Send Us Yours.</span></h1>
+      <p>We're active buyers in the Chicago market. If you have off-market properties, distressed homes, or wholesale deals — we want to see them. Fast closings, serious buyer.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="icon-grid">
+        <div class="icon-card"><i class="fa-solid fa-bolt"></i><h4>Fast Closings</h4><p>We can close quickly. No delays, no games.</p></div>
+        <div class="icon-card"><i class="fa-solid fa-handshake"></i><h4>We're Serious</h4><p>No tire kickers. We review every deal submitted.</p></div>
+        <div class="icon-card"><i class="fa-solid fa-map-location-dot"></i><h4>All Chicago</h4><p>We buy throughout the entire Chicago metro area.</p></div>
+        <div class="icon-card"><i class="fa-solid fa-repeat"></i><h4>Repeat Business</h4><p>We're building long-term relationships with wholesalers.</p></div>
+      </div>
+      <div class="form-grid" style="margin-top:0;">
+        <div class="form-info reveal-left">
+          <p class="section-label">Submit a Deal</p>
+          <h3>What We're Looking For</h3>
+          <p>We buy single-family homes, multi-family, and mixed-use properties throughout Chicago and surrounding suburbs. Distressed, vacant, probate, or off-market — bring it to us.</p>
+          <p>Fill out the form and we'll get back to you within 24 hours.</p>
+          <div class="contact-item"><span class="icon"><i class="fa-solid fa-phone"></i></span> 312-843-8223</div>
+          <div class="contact-item" style="font-size:0.79rem;"><span class="icon"><i class="fa-solid fa-envelope"></i></span> venegaswealthgroup@yahoo.com</div>
+        </div>
+        <div class="form-box reveal-scale">
+          <h3>Deal Submission Form</h3>
+          <div class="form-row"><label>Your Name</label><input type="text" name="name" placeholder="Full name" id="ws-name"></div>
+          <div class="form-row"><label>Phone</label><input type="tel" name="phone" placeholder="(312) 000-0000" id="ws-phone"></div>
+          <div class="form-row"><label>Email</label><input type="email" name="email" placeholder="your@email.com" id="ws-email"></div>
+          <div class="form-row address-row"><label>Property Address</label><input type="text" name="property_address" placeholder="Full property address" id="ws-address" class="address-input" autocomplete="off"></div>
+          <div class="form-row"><label>Asking Price</label><input type="text" name="asking_price" placeholder="$0,000" id="ws-price"></div>
+          <div class="form-row"><label>Property Type</label>
+            <select name="property_type" id="ws-type"><option value="">Select type...</option><option>Single Family</option><option>Multi-Family (2–4 units)</option><option>Multi-Family (5+ units)</option><option>Mixed-Use</option><option>Other</option></select>
+          </div>
+          <div class="form-row"><label>Property Condition &amp; Notes</label><textarea name="message" placeholder="Describe the condition, ARV, repairs needed..." id="ws-notes"></textarea></div>
+          <input type="hidden" name="form_type" value="Wholesaler Deal Submission">
+          <button class="form-submit" onclick="handleSubmit(this, ['ws-name','ws-phone','ws-email','ws-address','ws-price','ws-type','ws-notes'])">Submit Deal</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /wholesalers -->
+
+
+<!-- ═══ PROPERTY OWNERS PAGE ═══ -->
+<div id="page-owners" class="page">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Property Owners</p>
+      <h1>Let Us Manage<br><span>Your Property.</span></h1>
+      <p>Own rental property in Chicago but tired of the headaches? We offer professional full-service property management that protects your investment and maximizes your returns.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="icon-grid">
+        <div class="icon-card"><i class="fa-solid fa-user-check"></i><h4>Tenant Screening</h4><p>Full background, credit, and rental history checks to ensure quality tenants.</p></div>
+        <div class="icon-card"><i class="fa-solid fa-dollar-sign"></i><h4>Rent Collection</h4><p>On-time rent collection and direct deposit to your account every month.</p></div>
+        <div class="icon-card"><i class="fa-solid fa-wrench"></i><h4>Maintenance</h4><p>We coordinate all repairs with trusted local contractors — fast and reliable.</p></div>
+        <div class="icon-card"><i class="fa-solid fa-chart-line"></i><h4>Monthly Reporting</h4><p>Detailed monthly statements so you always know your property is performing.</p></div>
+      </div>
+      <div class="form-grid" style="margin-top:0;">
+        <div class="form-info reveal-left">
+          <p class="section-label">Get Started</p>
+          <h3>We'd Love to Manage Your Property</h3>
+          <p>Reach out today for a free consultation. Tell us about your property and let's discuss how we can maximize its value with zero stress on your end.</p>
+          <div class="contact-item"><span class="icon"><i class="fa-solid fa-phone"></i></span> 312-843-8223</div>
+          <div class="contact-item" style="font-size:0.79rem;"><span class="icon"><i class="fa-solid fa-envelope"></i></span> venegaswealthgroup@yahoo.com</div>
+        </div>
+        <div class="form-box reveal-scale">
+          <h3>Property Management Inquiry</h3>
+          <div class="form-row"><label>Your Name</label><input type="text" name="name" placeholder="Full name" id="pm-name"></div>
+          <div class="form-row"><label>Phone</label><input type="tel" name="phone" placeholder="(312) 000-0000" id="pm-phone"></div>
+          <div class="form-row"><label>Email</label><input type="email" name="email" placeholder="your@email.com" id="pm-email"></div>
+          <div class="form-row address-row"><label>Property Address</label><input type="text" name="property_address" placeholder="Property address in Chicago area" id="pm-address" class="address-input" autocomplete="off"></div>
+          <div class="form-row"><label>Property Type</label>
+            <select name="property_type" id="pm-type"><option value="">Select type...</option><option>Single Family Home</option><option>Condo / Townhome</option><option>2–4 Unit Building</option><option>5+ Unit Building</option><option>Commercial</option></select>
+          </div>
+          <div class="form-row"><label>Current Status</label>
+            <select name="current_status" id="pm-status"><option value="">Select status...</option><option>Occupied – current tenant</option><option>Vacant – ready to rent</option><option>Needs work before renting</option></select>
+          </div>
+          <div class="form-row"><label>Additional Notes</label><textarea name="message" placeholder="Tell us more about your property and management needs..." id="pm-notes"></textarea></div>
+          <input type="hidden" name="form_type" value="Property Management Inquiry">
+          <button class="form-submit" onclick="handleSubmit(this, ['pm-name','pm-phone','pm-email','pm-address','pm-type','pm-status','pm-notes'])">Request Free Consultation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /owners -->
+
+
+<!-- ═══ CONTACT PAGE ═══ -->
+<div id="page-contact" class="page">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Get In Touch</p>
+      <h1>Contact <span>Us</span></h1>
+    </div>
+  </div>
+
+  <section class="form-section">
+    <div class="section-inner">
+      <div class="form-grid">
+        <div class="form-info reveal-left">
+          <p class="section-label">Venegas Wealth Group LLC</p>
+          <h3>Let's Connect</h3>
+          <p>Whether you're a potential investor, a wholesaler with a deal, a property owner seeking management, or simply want to learn more — we'd love to hear from you.</p>
+          <div class="contact-item"><span class="icon"><i class="fa-solid fa-phone"></i></span><a href="tel:3128438223" style="color:var(--navy);text-decoration:none;">312-843-8223</a></div>
+          <div class="contact-item" style="font-size:0.79rem;"><span class="icon"><i class="fa-solid fa-envelope"></i></span><a href="mailto:venegaswealthgroup@yahoo.com" style="color:var(--navy);text-decoration:none;">venegaswealthgroup@yahoo.com</a></div>
+          <div class="contact-item" style="align-items:flex-start;"><span class="icon" style="margin-top:2px;"><i class="fa-solid fa-location-dot"></i></span><span>680 N Lake Shore Dr<br>Suite 110-2937<br>Chicago, IL 60611</span></div>
+          <br>
+          <div style="padding:1.5rem;background:var(--navy);border-left:3px solid var(--gold);">
+            <p style="font-family:var(--font-ui);font-size:0.77rem;color:rgba(255,255,255,0.7);line-height:1.8;margin:0;"><strong style="color:var(--gold);">Response Time:</strong><br>We respond to all inquiries within 24 business hours.</p>
+          </div>
+        </div>
+        <div class="form-box reveal-scale">
+          <h3>Send Us a Message</h3>
+          <div class="form-row"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" id="c-name"></div>
+          <div class="form-row"><label>Email</label><input type="email" name="email" placeholder="your@email.com" id="c-email"></div>
+          <div class="form-row"><label>Phone</label><input type="tel" name="phone" placeholder="(312) 000-0000" id="c-phone"></div>
+          <div class="form-row"><label>Reason for Contact</label>
+            <select name="reason" id="c-reason"><option value="">Select a reason...</option><option>Investment / Lending Inquiry</option><option>Submit a Wholesale Deal</option><option>Property Management</option><option>General Inquiry</option></select>
+          </div>
+          <div class="form-row"><label>Message</label><textarea name="message" placeholder="How can we help you?" style="min-height:130px;" id="c-msg"></textarea></div>
+          <input type="hidden" name="form_type" value="General Contact">
+          <button class="form-submit" onclick="handleSubmit(this, ['c-name','c-email','c-phone','c-reason','c-msg'])">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /contact -->
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-name">VENEGAS WEALTH GROUP</p>
+        <p class="footer-tag">LLC — Chicago Real Estate Investment Firm</p>
+        <p>Building generational wealth through strategic real estate acquisitions, renovations, and property management across the Chicago metropolitan area.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('about')">About</a>
+        <a onclick="showPage('services')">Services</a>
+        <a onclick="showPage('investors')">Investors</a>
+        <a onclick="showPage('wholesalers')">Wholesalers</a>
+        <a onclick="showPage('owners')">Property Owners</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:3128438223">312-843-8223</a>
+        <a href="mailto:venegaswealthgroup@yahoo.com" style="font-size:0.72rem;">venegaswealthgroup@yahoo.com</a>
+        <p>680 N Lake Shore Dr</p>
+        <p>Suite 110-2937</p>
+        <p>Chicago, IL 60611</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Venegas Wealth Group LLC. All rights reserved.</p>
+      <p>Chicago, Illinois</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── LOADER ──
+function hideLoader() {
+  document.getElementById('loader').classList.add('hidden');
+}
+// Hide after 2.5s no matter what
+setTimeout(hideLoader, 2500);
+// Also hide as soon as DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(hideLoader, 1800);
+});
+
+// ── PAGE NAVIGATION ──
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // re-trigger reveal for new page
+  setTimeout(observeReveal, 100);
+}
+
+// ── MOBILE MENU ──
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('active');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('active');
+}
+
+// ── FORM SUBMIT via FORMSPREE ──
+const FORMSPREE = 'https://formspree.io/f/mvznkgga';
+
+async function handleSubmit(btn, fieldIds) {
+  // Basic validation — check required fields
+  let valid = true;
+  fieldIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && !el.value.trim()) {
+      el.style.borderColor = '#e53e3e';
+      valid = false;
+    } else if (el) {
+      el.style.borderColor = '';
+    }
+  });
+  if (!valid) {
+    showToast('⚠ Please fill in all required fields.', true);
+    return;
+  }
+
+  // Collect data
+  const data = {};
+  fieldIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      const label = el.closest('.form-row') ? el.closest('.form-row').querySelector('label').textContent : id;
+      data[label] = el.value;
+    }
+  });
+
+  // Add hidden form_type
+  const hiddenType = btn.closest('.form-box').querySelector('input[name="form_type"]');
+  if (hiddenType) data['Form Type'] = hiddenType.value;
+
+  // Disable button while sending
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    const res = await fetch(FORMSPREE, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (res.ok) {
+      showToast('✓ Message sent — we\'ll be in touch within 24 hours!');
+      // Clear fields
+      fieldIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      btn.textContent = '✓ Sent!';
+      setTimeout(() => { btn.textContent = btn.dataset.label || 'Submit'; btn.disabled = false; }, 3000);
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (err) {
+    showToast('✗ Something went wrong. Please email us directly.', true);
+    btn.textContent = btn.dataset.label || 'Submit';
+    btn.disabled = false;
+  }
+}
+
+function showToast(msg, isError) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.borderColor = isError ? '#e53e3e' : 'var(--gold)';
+  t.style.color = isError ? '#e53e3e' : 'var(--gold)';
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 5000);
+}
+
+// legacy fallback
+function submitForm() { showToast('✓ Message sent!'); }
+
+// ── CLOSE MENU ON OUTSIDE CLICK ──
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburger');
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+});
+
+// ── SCROLL REVEAL ──
+function observeReveal() {
+  const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => {
+    if (!el.classList.contains('visible')) observer.observe(el);
+  });
+}
+document.addEventListener('DOMContentLoaded', observeReveal);
+</script>
+<!-- ADDRESS AUTOCOMPLETE STYLES -->
+<style>
+.address-row { position: relative; }
+.address-dropdown {
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  background: var(--white);
+  border: 1px solid rgba(10,31,68,0.2);
+  border-top: none;
+  z-index: 500;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(10,31,68,0.12);
+  display: none;
+}
+.address-dropdown.open { display: block; }
+.address-option {
+  padding: 0.75rem 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--navy);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(10,31,68,0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  transition: background 0.2s;
+}
+.address-option:last-child { border-bottom: none; }
+.address-option:hover, .address-option.active { background: rgba(201,168,76,0.08); color: var(--navy); }
+.address-option i { color: var(--gold); margin-top: 2px; flex-shrink: 0; font-size: 0.75rem; }
+.address-option .addr-main { font-weight: 600; display: block; }
+.address-option .addr-sub { font-size: 0.72rem; color: var(--gray); display: block; margin-top: 1px; }
+.address-loading {
+  padding: 0.75rem 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--gray);
+  text-align: center;
+}
+</style>
+
+<script>
+// ── ADDRESS AUTOCOMPLETE (Nominatim / OpenStreetMap - free, no API key) ──
+let addressTimers = {};
+
+function initAddressAutocomplete() {
+  document.querySelectorAll('.address-input').forEach(input => {
+    // Create dropdown
+    const dropdown = document.createElement('div');
+    dropdown.className = 'address-dropdown';
+    input.parentNode.appendChild(dropdown);
+
+    input.addEventListener('input', function() {
+      const val = this.value.trim();
+      const id = this.id;
+      clearTimeout(addressTimers[id]);
+
+      if (val.length < 3) {
+        dropdown.classList.remove('open');
+        return;
+      }
+
+      dropdown.innerHTML = '<div class="address-loading"><i class="fa-solid fa-spinner fa-spin"></i> Searching...</div>';
+      dropdown.classList.add('open');
+
+      addressTimers[id] = setTimeout(() => fetchAddresses(val, dropdown, input), 400);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      const items = dropdown.querySelectorAll('.address-option');
+      const active = dropdown.querySelector('.address-option.active');
+      let idx = Array.from(items).indexOf(active);
+      if (e.key === 'ArrowDown') { e.preventDefault(); idx = Math.min(idx + 1, items.length - 1); items.forEach(i => i.classList.remove('active')); if (items[idx]) items[idx].classList.add('active'); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); idx = Math.max(idx - 1, 0); items.forEach(i => i.classList.remove('active')); if (items[idx]) items[idx].classList.add('active'); }
+      if (e.key === 'Enter' && active) { e.preventDefault(); input.value = active.dataset.value; dropdown.classList.remove('open'); }
+      if (e.key === 'Escape') { dropdown.classList.remove('open'); }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+  });
+}
+
+async function fetchAddresses(query, dropdown, input) {
+  try {
+    // Bias to Chicago area
+    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query + ' Chicago Illinois')}&format=json&addressdetails=1&limit=6&countrycodes=us`;
+    const res = await fetch(url, { headers: { 'Accept-Language': 'en' } });
+    const data = await res.json();
+
+    if (!data.length) {
+      dropdown.innerHTML = '<div class="address-loading">No addresses found. Try a different search.</div>';
+      return;
+    }
+
+    dropdown.innerHTML = '';
+    data.forEach(place => {
+      const a = place.address;
+      const main = [a.house_number, a.road].filter(Boolean).join(' ') || place.display_name.split(',')[0];
+      const sub = [a.city || a.town || a.village, a.state, a.postcode].filter(Boolean).join(', ');
+      const full = place.display_name;
+
+      const item = document.createElement('div');
+      item.className = 'address-option';
+      item.dataset.value = [a.house_number, a.road, a.city || a.town, a.state, a.postcode].filter(Boolean).join(', ');
+      item.innerHTML = `<i class="fa-solid fa-location-dot"></i><span><span class="addr-main">${main}</span><span class="addr-sub">${sub}</span></span>`;
+      item.addEventListener('click', function() {
+        input.value = this.dataset.value;
+        dropdown.classList.remove('open');
+        input.style.borderColor = 'var(--gold)';
+      });
+      dropdown.appendChild(item);
+    });
+    dropdown.classList.add('open');
+  } catch (err) {
+    dropdown.innerHTML = '<div class="address-loading">Could not load suggestions.</div>';
+  }
+}
+
+// Init on page load and after page switches
+document.addEventListener('DOMContentLoaded', initAddressAutocomplete);
+const _origShowPage = showPage;
+</script>
+
+</body>
+</html>
